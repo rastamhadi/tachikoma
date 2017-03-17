@@ -5,9 +5,8 @@
 [![Code Climate](http://img.shields.io/codeclimate/github/sanemat/tachikoma.svg?style=flat)](https://codeclimate.com/github/sanemat/tachikoma)
 [![Coverage Status](http://img.shields.io/coveralls/sanemat/tachikoma/master.svg?style=flat)](https://coveralls.io/r/sanemat/tachikoma)
 
-**Tachikoma** is a Interval Pull Requester with
-bundler/carton/david/cocoapods/composer/none update.
-This is [Actual pull request](https://github.com/sanemat/tachikoma/pull/152).
+**Tachikoma** updates bundler/carton/david/cocoapods/composer/none dependencies and submits them to your repository in the form of a pull request.
+This is an [actual pull request](https://github.com/sanemat/tachikoma/pull/152) submitted by tachikoma.
 
 ![tachikoma](https://cloud.githubusercontent.com/assets/75448/4431995/1f7817e4-4681-11e4-8235-64df5c562496.gif 'tachikoma')
 ![tachikoma](https://cloud.githubusercontent.com/assets/75448/4431997/26649596-4681-11e4-8d9e-a456f570acd1.gif 'tachikoma')
@@ -17,25 +16,24 @@ Most aspects of its behavior can be tweaked via various
 
 ## Strategies
 
-You can use these strategies:
+Tachikoma supports these dependency managers:
 
-- Bundler (Ruby)
-- Carton (Perl)
-- David (Node.js)
-- npm-check-updates (Node.js)
-- CocoaPods (Objective-C, Swift)
-- Carthage (Swift)
-- Composer (PHP)
-- None (without strategy)
+|    Dependency Manager   |      Language      |           Rake Task            |
+|-------------------------|--------------------|--------------------------------|
+| Bundler                 | Ruby               | `rake tachikoma:run_bundler`   |
+| Carton                  | Perl               | `rake tachikoma:run_carton`    |
+| David                   | Node.js            | `rake tachikoma:run_david`     |
+| npm-check-updates       | Node.js            | `rake tachikoma:run_ncu`       |
+| CocoaPods               | Objective-C, Swift | `rake tachikoma:run_cocoapods` |
+| Carthage                | Swift              | `rake tachikoma:run_carthage`  |
+| Composer                | PHP                | `rake tachikoma:run_composer`  |
+| None (without strategy) |                    | `rake tachikoma:run_none`      |
 
-If you use carton, then you use `tachikoma:run_carton` instead of `tachikoma:run_bundler`.
-You can also use `tachikoma:run_none`, `tachikoma:run_cocoapods`, `tachikoma:run_composer` and `tachikoma:run_david`.
-
-## Setting
+## Settings
 
 See [configuration options](data/default.yaml).
 
-### Use as rubygem
+### Using tachikoma as a rubygem
 
 see: https://github.com/sanemat/bot-motoko-tachikoma
 
